@@ -3,6 +3,7 @@ LIBS:mfk_alps
 LIBS:mfk_atmel
 LIBS:mfk_interface
 LIBS:mfk_opa
+LIBS:mfk_opto
 LIBS:mfk_relay
 LIBS:mfk_ti_opamps
 LIBS:mfk_transistor
@@ -39,6 +40,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:RC5-preamp-board-cache
 EELAYER 27 0
 EELAYER END
 $Descr A 11000 8500
@@ -56,12 +58,12 @@ $EndDescr
 $Comp
 L ARDUINO_PRO_MINI_24 U2
 U 1 1 55233957
-P 5850 4900
-F 0 "U2" H 5850 5600 60  0000 C CNN
-F 1 "ARDUINO_PRO_MINI" H 5850 4200 60  0000 C CNN
-F 2 "DIL24-600" H 5850 4900 60  0001 C CNN
-F 3 "http://arduino.cc/en/Main/arduinoBoardProMini" H 5850 4800 60  0001 C CNN
-	1    5850 4900
+P 6100 4900
+F 0 "U2" H 6100 5600 60  0000 C CNN
+F 1 "ARDUINO_PRO_MINI" H 6100 4200 60  0000 C CNN
+F 2 "DIL24-600" H 6100 4900 60  0001 C CNN
+F 3 "http://arduino.cc/en/Main/arduinoBoardProMini" H 6100 4800 60  0001 C CNN
+	1    6100 4900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -152,22 +154,6 @@ F 3 "" H 9750 2800 60  0000 C CNN
 	1    9750 2800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9400 1300 9300 1300
-Wire Wire Line
-	9300 1300 9300 3050
-Wire Wire Line
-	9400 2900 9300 2900
-Connection ~ 9300 2900
-Wire Wire Line
-	9400 2500 9300 2500
-Connection ~ 9300 2500
-Wire Wire Line
-	9400 2100 9300 2100
-Connection ~ 9300 2100
-Wire Wire Line
-	9400 1700 9300 1700
-Connection ~ 9300 1700
 $Comp
 L DGND #PWR01
 U 1 1 55233AF1
@@ -179,22 +165,6 @@ F 3 "" H 9300 3050 60  0000 C CNN
 	1    9300 3050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9200 2700 9400 2700
-Wire Wire Line
-	8900 1100 9400 1100
-Wire Wire Line
-	9200 1100 9200 2700
-Wire Wire Line
-	9400 2300 9200 2300
-Connection ~ 9200 2300
-Wire Wire Line
-	9400 1900 9200 1900
-Connection ~ 9200 1900
-Wire Wire Line
-	9400 1500 9200 1500
-Connection ~ 9200 1500
-Connection ~ 9200 1100
 $Comp
 L CONN_7 P3
 U 1 1 55233C57
@@ -206,22 +176,6 @@ F 3 "" H 1150 4900 60  0000 C CNN
 	1    1150 4900
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1500 4600 2150 4600
-Wire Wire Line
-	1500 4700 2150 4700
-Wire Wire Line
-	1500 4800 2150 4800
-Wire Wire Line
-	1500 4900 2150 4900
-Wire Wire Line
-	1500 5000 2150 5000
-Wire Wire Line
-	1500 5100 2150 5100
-Wire Wire Line
-	1500 5200 1600 5200
-Wire Wire Line
-	1600 5200 1600 5300
 $Comp
 L DGND #PWR02
 U 1 1 55233D9A
@@ -245,20 +199,6 @@ Text Label 2150 5000 0    60   ~ 0
 MUTE_SWITCH
 Text Label 2150 5100 0    60   ~ 0
 PWR_SWITCH
-Wire Wire Line
-	9350 4300 9000 4300
-Wire Wire Line
-	9350 4500 9000 4500
-Wire Wire Line
-	9350 4950 9000 4950
-Wire Wire Line
-	9350 5050 9000 5050
-Wire Wire Line
-	9350 5150 9000 5150
-Wire Wire Line
-	9350 5250 9000 5250
-Wire Wire Line
-	9350 5350 9000 5350
 Text Label 9000 5050 2    60   ~ 0
 VOL_UP
 Text Label 9000 5150 2    60   ~ 0
@@ -275,8 +215,6 @@ Text Label 9000 4300 2    60   ~ 0
 PWR_LED
 Text Notes 1050 4150 0    60   ~ 0
 Switch connections are optional.\nEach switch is a SPST normally open\nmomentary with one side connected\nto the input and the other to DGND.
-Wire Wire Line
-	9350 5450 9000 5450
 Text Label 9000 4500 2    60   ~ 0
 RC_CMD
 $Comp
@@ -301,106 +239,65 @@ F 3 "" H 9700 4400 60  0000 C CNN
 	1    9700 4400
 	1    0    0    -1  
 $EndComp
-Text Label 6600 5050 0    60   ~ 0
+Text Label 6850 5050 0    60   ~ 0
 VOL_UP_SWITCH
-Text Label 6600 4950 0    60   ~ 0
+Text Label 6850 4950 0    60   ~ 0
 VOL_DN_SWITCH
-Text Label 6600 4750 0    60   ~ 0
+Text Label 6850 4750 0    60   ~ 0
 SOURCE_DN_SWITCH
-Text Label 5050 4950 2    60   ~ 0
+Text Label 5300 4950 2    60   ~ 0
 MUTE_SWITCH
-Text Label 5050 5050 2    60   ~ 0
+Text Label 5300 5050 2    60   ~ 0
 PWR_SWITCH
-Text Label 6600 4850 0    60   ~ 0
+Text Label 6850 4850 0    60   ~ 0
 SOURCE_UP_SWITCH
-Text Label 6600 5250 0    60   ~ 0
+Text Label 6850 5250 0    60   ~ 0
 VOL_UP
-Text Label 6600 5350 0    60   ~ 0
+Text Label 6850 5350 0    60   ~ 0
 VOL_DN
-Text Label 6600 5450 0    60   ~ 0
+Text Label 6850 5450 0    60   ~ 0
 SOURCE_UP
-Text Label 5050 5450 2    60   ~ 0
+Text Label 5300 5450 2    60   ~ 0
 SOURCE_DN
-Text Label 5050 5350 2    60   ~ 0
+Text Label 5300 5350 2    60   ~ 0
 MUTE
-Text Label 5050 5250 2    60   ~ 0
+Text Label 5300 5250 2    60   ~ 0
 PWR
-Text Label 5050 5150 2    60   ~ 0
+Text Label 5300 5150 2    60   ~ 0
 PWR_LED
-Text Label 6600 5150 0    60   ~ 0
+Text Label 6850 5150 0    60   ~ 0
 RC_CMD
-Wire Wire Line
-	5400 5150 5050 5150
-Wire Wire Line
-	6300 5150 6600 5150
-Wire Wire Line
-	6600 5250 6300 5250
-Wire Wire Line
-	6600 5350 6300 5350
-Wire Wire Line
-	6600 5450 6300 5450
-Wire Wire Line
-	6600 5050 6300 5050
-Wire Wire Line
-	6600 4950 6300 4950
-Wire Wire Line
-	6600 4850 6300 4850
-Wire Wire Line
-	6600 4750 6300 4750
-Wire Wire Line
-	5050 5450 5400 5450
-Wire Wire Line
-	5050 5350 5400 5350
-Wire Wire Line
-	5050 5250 5400 5250
-Wire Wire Line
-	5400 5050 5050 5050
-Wire Wire Line
-	5400 4950 5050 4950
-Text Notes 3450 4900 0    40   ~ 0
+Text Notes 3700 4900 0    40   ~ 0
 MUTE_SWITCH and PWR_SWITCH\nhave different pin assignments\nthan in the upstream project.
-Wire Wire Line
-	6300 4650 6600 4650
-Wire Wire Line
-	6600 4650 6600 3900
-NoConn ~ 6300 4550
-NoConn ~ 5400 4550
-NoConn ~ 5400 4450
-NoConn ~ 5400 4350
-NoConn ~ 5400 4750
-NoConn ~ 5400 4850
+NoConn ~ 6550 4550
+NoConn ~ 5650 4550
+NoConn ~ 5650 4450
+NoConn ~ 5650 4350
+NoConn ~ 5650 4850
 $Comp
 L DGND #PWR03
 U 1 1 5523481F
-P 6450 4500
-F 0 "#PWR03" H 6450 4500 40  0001 C CNN
-F 1 "DGND" H 6450 4430 40  0000 C CNN
-F 2 "" H 6450 4500 60  0000 C CNN
-F 3 "" H 6450 4500 60  0000 C CNN
-	1    6450 4500
+P 6700 4500
+F 0 "#PWR03" H 6700 4500 40  0001 C CNN
+F 1 "DGND" H 6700 4430 40  0000 C CNN
+F 2 "" H 6700 4500 60  0000 C CNN
+F 3 "" H 6700 4500 60  0000 C CNN
+	1    6700 4500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6450 4500 6450 4450
-Wire Wire Line
-	6450 4450 6300 4450
-NoConn ~ 6300 4350
+NoConn ~ 6550 4350
 $Comp
 L DGND #PWR04
 U 1 1 5523485B
-P 5250 4700
-F 0 "#PWR04" H 5250 4700 40  0001 C CNN
-F 1 "DGND" H 5250 4630 40  0000 C CNN
-F 2 "" H 5250 4700 60  0000 C CNN
-F 3 "" H 5250 4700 60  0000 C CNN
-	1    5250 4700
+P 5350 4700
+F 0 "#PWR04" H 5350 4700 40  0001 C CNN
+F 1 "DGND" H 5350 4630 40  0000 C CNN
+F 2 "" H 5350 4700 60  0000 C CNN
+F 3 "" H 5350 4700 60  0000 C CNN
+	1    5350 4700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 4700 5250 4650
-Wire Wire Line
-	5250 4650 5400 4650
-Text Label 6600 3900 3    60   ~ 0
+Text Label 6850 3900 3    60   ~ 0
 VCC
 $Comp
 L CP1 C1
@@ -435,8 +332,6 @@ F 3 "~" H 4400 1350 60  0000 C CNN
 	1    4400 1350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5400 1050 5800 1050
 Text Label 5800 1050 2    60   ~ 0
 VCC
 $Comp
@@ -450,14 +345,8 @@ F 3 "" H 1550 2150 60  0000 C CNN
 	1    1550 2150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1550 2150 1550 2050
-Wire Wire Line
-	1400 2050 1900 2050
 Text Label 1700 1850 2    60   ~ 0
 VCC
-Wire Wire Line
-	1400 1850 1900 1850
 Text Notes 4400 750  0    60   ~ 0
 Remove to use external VCC source.
 $Comp
@@ -471,16 +360,6 @@ F 3 "" H 3300 1100 60  0000 C CNN
 	1    3300 1100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2650 1050 2650 1150
-Wire Wire Line
-	3700 1050 4800 1050
-Wire Wire Line
-	3900 1050 3900 1150
-Wire Wire Line
-	4400 1050 4400 1150
-Connection ~ 3900 1050
-Connection ~ 4400 1050
 $Comp
 L DGND #PWR06
 U 1 1 55235417
@@ -492,11 +371,6 @@ F 3 "" H 1550 1350 60  0000 C CNN
 	1    1550 1350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1550 1350 1550 1250
-Wire Wire Line
-	1550 1250 1400 1250
-Connection ~ 2650 1050
 Text Label 1400 1050 0    60   ~ 0
 RAW_DC
 Text Notes 1400 900  0    60   ~ 0
@@ -512,10 +386,6 @@ F 3 "~" H 2200 1050 60  0000 C CNN
 	1    2200 1050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2000 1050 1400 1050
-Wire Wire Line
-	2400 1050 2900 1050
 $Comp
 L DGND #PWR07
 U 1 1 552355A0
@@ -549,12 +419,6 @@ F 3 "" H 4400 1650 60  0000 C CNN
 	1    4400 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4400 1650 4400 1550
-Wire Wire Line
-	3900 1650 3900 1550
-Wire Wire Line
-	2650 1650 2650 1550
 $Comp
 L DGND #PWR010
 U 1 1 552357F5
@@ -566,8 +430,6 @@ F 3 "" H 3300 1650 60  0000 C CNN
 	1    3300 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3300 1650 3300 1350
 $Comp
 L PWR_FLAG #FLG011
 U 1 1 55235A1A
@@ -579,7 +441,6 @@ F 3 "" H 1900 2050 60  0000 C CNN
 	1    1900 2050
 	-1   0    0    1   
 $EndComp
-Connection ~ 1550 2050
 $Comp
 L PWR_FLAG #FLG012
 U 1 1 55235B87
@@ -591,8 +452,6 @@ F 3 "" H 1900 1800 60  0000 C CNN
 	1    1900 1800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1900 1850 1900 1800
 $Bitmap
 Pos 10250 6850
 Scale 1.000000
@@ -757,9 +616,222 @@ C0 58 82 E0 69 86 37 6D 0B A7 C2 93 89 E9 5D C5 88 2A 90 FC 74 0B B0 01 D5 F6 29
 56 96 2D 0B ED F6 7F C2 CC A3 57 85 CF 8C 0D E1 5F 0E 87 B5 3C 11 5E EB 0D 32 F1 5C 0A B0 54 C9 
 63 98 05 E1 6B C4 72 91 8E EA 95 27 8C 4B 0B 6B 30 6B 95 2D 08 DF 47 79 14 D8 40 20 A9 90 96 2D 
 E1 E7 3D C6 74 F3 E0 6E B9 00 E4 0E CC EC 2A 00 9E 03 F9 2E 43 53 93 3B E7 B1 3D FE 0F E4 2C B5 
-B8 3A B8 3B 5D 00 00 00 00 49 45 4E 44 AE 42 60 82 04 $EndBitmap
+B8 3A B8 3B 5D 00 00 00 00 49 45 4E 44 AE 42 60 82 0E $EndBitmap
 EndData
 $EndBitmap
 Text Label 8900 1100 0    60   ~ 0
 VCC
+$Comp
+L IR_MOD U?
+U 1 1 55244EFC
+P 5000 4250
+F 0 "U?" H 4750 4500 50  0000 L CNN
+F 1 "TSOP34136 " H 5200 4500 50  0000 C CNN
+F 2 "~" H 5000 4150 60  0000 C CNN
+F 3 "~" H 5000 4150 60  0000 C CNN
+	1    5000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 55244F7F
+P 4250 4150
+F 0 "R?" V 4330 4150 40  0000 C CNN
+F 1 "330" V 4257 4151 40  0000 C CNN
+F 2 "~" V 4180 4150 30  0000 C CNN
+F 3 "~" H 4250 4150 30  0000 C CNN
+	1    4250 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9400 1300 9300 1300
+Wire Wire Line
+	9300 1300 9300 1700
+Wire Wire Line
+	9300 1700 9300 2100
+Wire Wire Line
+	9300 2100 9300 2500
+Wire Wire Line
+	9300 2500 9300 2900
+Wire Wire Line
+	9300 2900 9300 3050
+Wire Wire Line
+	9400 2900 9300 2900
+Connection ~ 9300 2900
+Wire Wire Line
+	9400 2500 9300 2500
+Connection ~ 9300 2500
+Wire Wire Line
+	9400 2100 9300 2100
+Connection ~ 9300 2100
+Wire Wire Line
+	9400 1700 9300 1700
+Connection ~ 9300 1700
+Wire Wire Line
+	9200 2700 9400 2700
+Wire Wire Line
+	8900 1100 9200 1100
+Wire Wire Line
+	9200 1100 9400 1100
+Wire Wire Line
+	9200 1100 9200 1500
+Wire Wire Line
+	9200 1500 9200 1900
+Wire Wire Line
+	9200 1900 9200 2300
+Wire Wire Line
+	9200 2300 9200 2700
+Wire Wire Line
+	9400 2300 9200 2300
+Connection ~ 9200 2300
+Wire Wire Line
+	9400 1900 9200 1900
+Connection ~ 9200 1900
+Wire Wire Line
+	9400 1500 9200 1500
+Connection ~ 9200 1500
+Connection ~ 9200 1100
+Wire Wire Line
+	1500 4600 2150 4600
+Wire Wire Line
+	1500 4700 2150 4700
+Wire Wire Line
+	1500 4800 2150 4800
+Wire Wire Line
+	1500 4900 2150 4900
+Wire Wire Line
+	1500 5000 2150 5000
+Wire Wire Line
+	1500 5100 2150 5100
+Wire Wire Line
+	1500 5200 1600 5200
+Wire Wire Line
+	1600 5200 1600 5300
+Wire Wire Line
+	9350 4300 9000 4300
+Wire Wire Line
+	9350 4500 9000 4500
+Wire Wire Line
+	9350 4950 9000 4950
+Wire Wire Line
+	9350 5050 9000 5050
+Wire Wire Line
+	9350 5150 9000 5150
+Wire Wire Line
+	9350 5250 9000 5250
+Wire Wire Line
+	9350 5350 9000 5350
+Wire Wire Line
+	9350 5450 9000 5450
+Wire Wire Line
+	5650 5150 5300 5150
+Wire Wire Line
+	6550 5150 6850 5150
+Wire Wire Line
+	6850 5250 6550 5250
+Wire Wire Line
+	6850 5350 6550 5350
+Wire Wire Line
+	6850 5450 6550 5450
+Wire Wire Line
+	6850 5050 6550 5050
+Wire Wire Line
+	6850 4950 6550 4950
+Wire Wire Line
+	6850 4850 6550 4850
+Wire Wire Line
+	6850 4750 6550 4750
+Wire Wire Line
+	5300 5450 5650 5450
+Wire Wire Line
+	5300 5350 5650 5350
+Wire Wire Line
+	5300 5250 5650 5250
+Wire Wire Line
+	5650 5050 5300 5050
+Wire Wire Line
+	5650 4950 5300 4950
+Wire Wire Line
+	6550 4650 6850 4650
+Wire Wire Line
+	6850 4650 6850 3900
+Wire Wire Line
+	6700 4500 6700 4450
+Wire Wire Line
+	6700 4450 6550 4450
+Wire Wire Line
+	5400 1050 5800 1050
+Wire Wire Line
+	1550 2150 1550 2050
+Wire Wire Line
+	1400 2050 1550 2050
+Wire Wire Line
+	1550 2050 1900 2050
+Wire Wire Line
+	1400 1850 1900 1850
+Wire Wire Line
+	2650 1050 2650 1150
+Wire Wire Line
+	3700 1050 3900 1050
+Wire Wire Line
+	3900 1050 4400 1050
+Wire Wire Line
+	4400 1050 4800 1050
+Wire Wire Line
+	3900 1050 3900 1150
+Wire Wire Line
+	4400 1050 4400 1150
+Connection ~ 3900 1050
+Connection ~ 4400 1050
+Wire Wire Line
+	1550 1350 1550 1250
+Wire Wire Line
+	1550 1250 1400 1250
+Connection ~ 2650 1050
+Wire Wire Line
+	2000 1050 1400 1050
+Wire Wire Line
+	2400 1050 2650 1050
+Wire Wire Line
+	2650 1050 2900 1050
+Wire Wire Line
+	4400 1650 4400 1550
+Wire Wire Line
+	3900 1650 3900 1550
+Wire Wire Line
+	2650 1650 2650 1550
+Wire Wire Line
+	3300 1650 3300 1350
+Connection ~ 1550 2050
+Wire Wire Line
+	1900 1850 1900 1800
+Wire Wire Line
+	4500 4150 4600 4150
+Wire Wire Line
+	4000 4150 3700 4150
+Text Label 3700 4150 0    60   ~ 0
+VCC
+$Comp
+L DGND #PWR?
+U 1 1 552450B2
+P 5000 4500
+F 0 "#PWR?" H 5000 4500 40  0001 C CNN
+F 1 "DGND" H 5000 4430 40  0000 C CNN
+F 2 "" H 5000 4500 60  0000 C CNN
+F 3 "" H 5000 4500 60  0000 C CNN
+	1    5000 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4500 5000 4450
+Wire Wire Line
+	5650 4750 5500 4750
+Wire Wire Line
+	5650 4650 5350 4650
+Wire Wire Line
+	5350 4650 5350 4700
+Wire Wire Line
+	5500 4750 5500 4150
+Wire Wire Line
+	5500 4150 5400 4150
 $EndSCHEMATC

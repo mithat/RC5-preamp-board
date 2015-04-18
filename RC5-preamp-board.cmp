@@ -1,0 +1,199 @@
+Cmp-Mod V01 Created by CvPcb (25-Oct-2014 BZR 4029)-stable date = Sat 18 Apr 2015 12:26:49 AM CDT
+
+BeginCmp
+TimeStamp = /55234945;
+Reference = C1;
+ValeurCmp = 47u;
+IdModule  = mfk-CRP_5.0_2.0_0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /55234954;
+Reference = C2;
+ValeurCmp = 47u;
+IdModule  = mfk-CRP_5.0_2.0_0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /55234963;
+Reference = C3;
+ValeurCmp = 100n;
+IdModule  = mfk-C_4.0_2.5_2.5_0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /552452F0;
+Reference = C4;
+ValeurCmp = 100n;
+IdModule  = mfk-C_4.0_2.5_2.5_0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/553171A4;
+Reference = C201;
+ValeurCmp = 100n;
+IdModule  = mfk-C_4.0_2.5_2.5_0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/5531716E;
+Reference = C202;
+ValeurCmp = 100n;
+IdModule  = mfk-C_4.0_2.5_2.5_0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/5531717A;
+Reference = C203;
+ValeurCmp = 100n;
+IdModule  = mfk-C_4.0_2.5_2.5_0.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /552354BA;
+Reference = D1;
+ValeurCmp = 1N4007;
+IdModule  = mfk-DO-41;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/553171B2;
+Reference = D201;
+ValeurCmp = LED;
+IdModule  = LED-3MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /55233966;
+Reference = P1;
+ValeurCmp = RAW_DC;
+IdModule  = mfk-SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /55233A21;
+Reference = P2;
+ValeurCmp = VCC;
+IdModule  = mfk-SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /55233AB8;
+Reference = P3;
+ValeurCmp = VCC;
+IdModule  = mfk-SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /5523397A;
+Reference = P4;
+ValeurCmp = VCC;
+IdModule  = mfk-SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /55233A9C;
+Reference = P5;
+ValeurCmp = VCC;
+IdModule  = mfk-SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /55233AA2;
+Reference = P6;
+ValeurCmp = VCC;
+IdModule  = mfk-SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /55233AB2;
+Reference = P7;
+ValeurCmp = VCC;
+IdModule  = mfk-SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /55233C57;
+Reference = P8;
+ValeurCmp = INPUTS;
+IdModule  = mfk-SIL-7;
+EndCmp
+
+BeginCmp
+TimeStamp = /552340CD;
+Reference = P9;
+ValeurCmp = UI_OUT;
+IdModule  = mfk-SIL-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /552340B2;
+Reference = P10;
+ValeurCmp = CTL_OUT;
+IdModule  = mfk-SIL-6;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/5531856C;
+Reference = P201;
+ValeurCmp = FTDI Basic;
+IdModule  = mfk-SIL-6;
+EndCmp
+
+BeginCmp
+TimeStamp = /55244F7F;
+Reference = R1;
+ValeurCmp = 330R;
+IdModule  = mfk-R_0.25W_RN55;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/5531718C;
+Reference = R201;
+ValeurCmp = 10K;
+IdModule  = mfk-R_0.25W_RN55;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/553171AC;
+Reference = R202;
+ValeurCmp = 330;
+IdModule  = mfk-R_0.25W_RN55;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/55317198;
+Reference = SW201;
+ValeurCmp = Reset;
+IdModule  = mfk-SW_PUSH_6x3.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /5531B93B;
+Reference = U1;
+ValeurCmp = NCP1117DT50RKG;
+IdModule  = mfk-IPC7351-trans-TO228P1003X238-3N;
+EndCmp
+
+BeginCmp
+TimeStamp = /55244EFC;
+Reference = U3;
+ValeurCmp = TSOP34136 ;
+IdModule  = mfk-Vishay-TSOP341xx;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/55318327;
+Reference = U201;
+ValeurCmp = ATMEGA328P-PU;
+IdModule  = mfk-DIP-28_300_rnd;
+EndCmp
+
+BeginCmp
+TimeStamp = /55316B24/5531724C;
+Reference = X201;
+ValeurCmp = CSTLS16M0X53-B0;
+IdModule  = mfk-Murata-CSTLS_X;
+EndCmp
+
+EndListe

@@ -39,7 +39,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 2
 Title "RC5 remote control board"
-Date "18 apr 2015"
+Date "19 apr 2015"
 Rev ""
 Comp "Mithat Konar"
 Comment1 "Copyright (C) 2015 Mithat Konar"
@@ -103,17 +103,6 @@ F 3 "" H 9700 2400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_2 P7
-U 1 1 55233AB2
-P 9700 2800
-F 0 "P7" V 9650 2800 40  0000 C CNN
-F 1 "VCC" V 9750 2800 40  0000 C CNN
-F 2 "mfk-SIL-2" H 9700 2800 60  0001 C CNN
-F 3 "" H 9700 2800 60  0000 C CNN
-	1    9700 2800
-	1    0    0    -1  
-$EndComp
-$Comp
 L CONN_2 P3
 U 1 1 55233AB8
 P 9700 1200
@@ -127,12 +116,12 @@ $EndComp
 $Comp
 L DGND #PWR01
 U 1 1 55233AF1
-P 9250 3050
-F 0 "#PWR01" H 9250 3050 40  0001 C CNN
-F 1 "DGND" H 9250 2980 40  0000 C CNN
-F 2 "" H 9250 3050 60  0000 C CNN
-F 3 "" H 9250 3050 60  0000 C CNN
-	1    9250 3050
+P 9250 2650
+F 0 "#PWR01" H 9250 2650 40  0001 C CNN
+F 1 "DGND" H 9250 2580 40  0000 C CNN
+F 2 "" H 9250 2650 60  0000 C CNN
+F 3 "" H 9250 2650 60  0000 C CNN
+	1    9250 2650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -283,8 +272,6 @@ F 3 "" H 1550 2200 60  0000 C CNN
 $EndComp
 Text Label 1900 1900 2    60   ~ 0
 VCC
-Text Notes 3600 800  0    60   ~ 0
-Remove to use external VCC source.
 $Comp
 L DGND #PWR04
 U 1 1 55235417
@@ -530,7 +517,7 @@ C0 58 82 E0 69 86 37 6D 0B A7 C2 93 89 E9 5D C5 88 2A 90 FC 74 0B B0 01 D5 F6 29
 56 96 2D 0B ED F6 7F C2 CC A3 57 85 CF 8C 0D E1 5F 0E 87 B5 3C 11 5E EB 0D 32 F1 5C 0A B0 54 C9 
 63 98 05 E1 6B C4 72 91 8E EA 95 27 8C 4B 0B 6B 30 6B 95 2D 08 DF 47 79 14 D8 40 20 A9 90 96 2D 
 E1 E7 3D C6 74 F3 E0 6E B9 00 E4 0E CC EC 2A 00 9E 03 F9 2E 43 53 93 3B E7 B1 3D FE 0F E4 2C B5 
-B8 3A B8 3B 5D 00 00 00 00 49 45 4E 44 AE 42 60 82 82 $EndBitmap
+B8 3A B8 3B 5D 00 00 00 00 49 45 4E 44 AE 42 60 82 C8 $EndBitmap
 EndData
 $EndBitmap
 Text Label 8850 1100 0    60   ~ 0
@@ -642,10 +629,7 @@ IR
 Wire Wire Line
 	9350 1300 9250 1300
 Wire Wire Line
-	9250 1300 9250 3050
-Wire Wire Line
-	9350 2900 9250 2900
-Connection ~ 9250 2900
+	9250 1300 9250 2650
 Wire Wire Line
 	9350 2500 9250 2500
 Connection ~ 9250 2500
@@ -656,14 +640,9 @@ Wire Wire Line
 	9350 1700 9250 1700
 Connection ~ 9250 1700
 Wire Wire Line
-	9150 2700 9350 2700
-Wire Wire Line
 	8850 1100 9350 1100
 Wire Wire Line
-	9150 1100 9150 2700
-Wire Wire Line
-	9350 2300 9150 2300
-Connection ~ 9150 2300
+	9150 2300 9350 2300
 Wire Wire Line
 	9350 1900 9150 1900
 Connection ~ 9150 1900
@@ -774,9 +753,9 @@ RC_CMD
 NoConn ~ 5950 6000
 NoConn ~ 5950 6100
 NoConn ~ 5950 6200
-Text Notes 8450 3650 2    60   ~ 0
+Text Notes 8450 3600 2    60   ~ 0
 To (optional) indicator LEDs.\n
-Text Notes 8450 3750 2    60   Italic 0
+Text Notes 8450 3700 2    60   Italic 0
 Requires current limiting resistors!!!
 Text Notes 8900 2000 2    60   ~ 0
 Vcc for external modules.
@@ -811,4 +790,8 @@ Connection ~ 3900 1050
 Connection ~ 4200 1050
 Wire Wire Line
 	3700 1050 4500 1050
+Text Notes 8450 3800 2    60   ~ 0
+10mA per pin max.
+Wire Wire Line
+	9150 1100 9150 2300
 $EndSCHEMATC

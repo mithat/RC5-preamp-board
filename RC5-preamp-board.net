@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/mithat/Electronics/Arduino/arduino-rc-ui/PCB/RC5-preamp-board/RC5-preamp-board.sch)
-    (date "Sun 19 Apr 2015 06:27:20 PM CDT")
+    (date "Sun 19 Apr 2015 08:38:00 PM CDT")
     (tool "eeschema (25-Oct-2014 BZR 4029)-stable"))
   (components
     (comp (ref P1)
@@ -84,7 +84,7 @@
       (tstamp 552354BA))
     (comp (ref U3)
       (value "TSOP34136 ")
-      (footprint mfk-Vishay-TSOP341xx)
+      (footprint mfk-Vishay-TSOP341xx-alt)
       (libsource (lib mfk_opto) (part IR_MOD))
       (sheetpath (names /) (tstamps /))
       (tstamp 55244EFC))
@@ -354,10 +354,10 @@
         (pin (num 6) (name P6) (type passive))
         (pin (num 7) (name P7) (type passive)))))
   (libraries
-    (library (logical mfk_atmel)
-      (uri /home/mithat/Electronics/kicad/lib/kicad-components-mfk/mfk_atmel.lib))
     (library (logical device)
       (uri /usr/share/kicad/library/device.lib))
+    (library (logical mfk_atmel)
+      (uri /home/mithat/Electronics/kicad/lib/kicad-components-mfk/mfk_atmel.lib))
     (library (logical mfk_vreg)
       (uri /home/mithat/Electronics/kicad/lib/kicad-components-mfk/mfk_vreg.lib))
     (library (logical mfk_opto)

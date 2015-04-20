@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (25-Oct-2014 BZR 4029)-stable date = Sun 19 Apr 2015 06:28:02 PM CDT
+Cmp-Mod V01 Created by CvPcb (25-Oct-2014 BZR 4029)-stable date = Sun 19 Apr 2015 08:37:16 PM CDT
 
 BeginCmp
 TimeStamp = /55234945;
@@ -172,7 +172,7 @@ BeginCmp
 TimeStamp = /55244EFC;
 Reference = U3;
 ValeurCmp = TSOP34136 ;
-IdModule  = mfk-Vishay-TSOP341xx;
+IdModule  = mfk-Vishay-TSOP341xx-alt;
 EndCmp
 
 BeginCmp

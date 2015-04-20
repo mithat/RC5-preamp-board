@@ -39,7 +39,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 2
 Title "Arduino ATMEGA328-PU subcircuit"
-Date "19 apr 2015"
+Date "20 apr 2015"
 Rev ""
 Comp "Mithat Konar"
 Comment1 ""
